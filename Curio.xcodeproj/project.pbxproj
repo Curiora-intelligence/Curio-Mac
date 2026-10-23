@@ -1,0 +1,389 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		160CEDA5707D9EDC9DA04283 /* Curio/UI/ComposerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23E608D4622C5A6C5CCDDCED /* Curio/UI/ComposerView.swift */; };
+		6EC68DAE268CF1AD88AE64EB /* Curio/DesignSystem/CurioraTokens.swift in Sources */ = {isa = PBXBuildFile; fileRef = F107EADD6A01E29718515FB3 /* Curio/DesignSystem/CurioraTokens.swift */; };
+		79FBF14ECA6F5B6CD55426B2 /* Curio/DesignSystem/CurioIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAC0907567DE1B63437FE3ED /* Curio/DesignSystem/CurioIcon.swift */; };
+		8B48D41FAE634A40B703ED0F /* Curio/Networking/CurioraBackend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64DE0030E1518A58DD8ABAC1 /* Curio/Networking/CurioraBackend.swift */; };
+		8BCC1A6C387AD56B5A674C84 /* Curio/DesignSystem/Controls.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79211F3749E5D74BE517BD6A /* Curio/DesignSystem/Controls.swift */; };
+		8EFD5743999F168D176AB696 /* Curio/Resources/Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3685E330EC5277A9DD5661C6 /* Curio/Resources/Assets.xcassets */; };
+		90E938027D305B1B51CD93CC /* Curio/UI/WorkspaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57D119080999EF0F0865A0CD /* Curio/UI/WorkspaceView.swift */; };
+		9D365548021B9A6042754007 /* CurioTests/WorkspaceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C291FF23E6A7A29CBCA59DF /* CurioTests/WorkspaceTests.swift */; };
+		AF9BCD0C9FB3D614BE88DC0A /* Curio/App/CurioApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7EECC7F011D8D505BADDC0B9 /* Curio/App/CurioApp.swift */; };
+		B1CA15BAD8F9AAAE8608122F /* Curio/NativeServices/NativeServiceBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5143DB73227F1416A44C3B /* Curio/NativeServices/NativeServiceBoundary.swift */; };
+		E5F5B6EFE392CFBABE8282DF /* Curio/State/WorkspaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DE8B92CC198940A284B48 /* Curio/State/WorkspaceState.swift */; };
+		FCC201827855125281E84066 /* Curio/UI/SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D6A508344FE5AC18B96AE7 /* Curio/UI/SidebarView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		61C316BB80810F9CBB27735D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 47A48C7821D33B242F0953A7;
+			remoteInfo = Curio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0E5143DB73227F1416A44C3B /* Curio/NativeServices/NativeServiceBoundary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/NativeServices/NativeServiceBoundary.swift; sourceTree = SOURCE_ROOT; };
+		23E608D4622C5A6C5CCDDCED /* Curio/UI/ComposerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/UI/ComposerView.swift; sourceTree = SOURCE_ROOT; };
+		31D6A508344FE5AC18B96AE7 /* Curio/UI/SidebarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/UI/SidebarView.swift; sourceTree = SOURCE_ROOT; };
+		3685E330EC5277A9DD5661C6 /* Curio/Resources/Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Curio/Resources/Assets.xcassets; sourceTree = SOURCE_ROOT; };
+		50DE8A3CD591FE014AFEC31F /* CurioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = CurioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		535DE8B92CC198940A284B48 /* Curio/State/WorkspaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/State/WorkspaceState.swift; sourceTree = SOURCE_ROOT; };
+		57D119080999EF0F0865A0CD /* Curio/UI/WorkspaceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/UI/WorkspaceView.swift; sourceTree = SOURCE_ROOT; };
+		64DE0030E1518A58DD8ABAC1 /* Curio/Networking/CurioraBackend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/Networking/CurioraBackend.swift; sourceTree = SOURCE_ROOT; };
+		6C291FF23E6A7A29CBCA59DF /* CurioTests/WorkspaceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurioTests/WorkspaceTests.swift; sourceTree = SOURCE_ROOT; };
+		79211F3749E5D74BE517BD6A /* Curio/DesignSystem/Controls.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/DesignSystem/Controls.swift; sourceTree = SOURCE_ROOT; };
+		7EECC7F011D8D505BADDC0B9 /* Curio/App/CurioApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/App/CurioApp.swift; sourceTree = SOURCE_ROOT; };
+		BAC0907567DE1B63437FE3ED /* Curio/DesignSystem/CurioIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/DesignSystem/CurioIcon.swift; sourceTree = SOURCE_ROOT; };
+		F107EADD6A01E29718515FB3 /* Curio/DesignSystem/CurioraTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/DesignSystem/CurioraTokens.swift; sourceTree = SOURCE_ROOT; };
+		F6D2AA0FB8F3AD9E96B06C74 /* Curio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Curio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2C0923A3FD6D8A3AC0E427E2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FE88472D44589DE15F55650B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CB1907C2C87500E6F08C15B7 /* CurioTests */ = {
+			isa = PBXGroup;
+			children = (
+				6C291FF23E6A7A29CBCA59DF /* CurioTests/WorkspaceTests.swift */,
+			);
+			name = CurioTests;
+			sourceTree = "<group>";
+		};
+		E50290A24C49A459B43487C5 = {
+			isa = PBXGroup;
+			children = (
+				EF69FDC9BA97107E931FF888 /* Curio */,
+				CB1907C2C87500E6F08C15B7 /* CurioTests */,
+				3685E330EC5277A9DD5661C6 /* Curio/Resources/Assets.xcassets */,
+				FBDC4F23F93125BBEEAE800C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EF69FDC9BA97107E931FF888 /* Curio */ = {
+			isa = PBXGroup;
+			children = (
+				7EECC7F011D8D505BADDC0B9 /* Curio/App/CurioApp.swift */,
+				79211F3749E5D74BE517BD6A /* Curio/DesignSystem/Controls.swift */,
+				BAC0907567DE1B63437FE3ED /* Curio/DesignSystem/CurioIcon.swift */,
+				F107EADD6A01E29718515FB3 /* Curio/DesignSystem/CurioraTokens.swift */,
+				0E5143DB73227F1416A44C3B /* Curio/NativeServices/NativeServiceBoundary.swift */,
+				64DE0030E1518A58DD8ABAC1 /* Curio/Networking/CurioraBackend.swift */,
+				535DE8B92CC198940A284B48 /* Curio/State/WorkspaceState.swift */,
+				23E608D4622C5A6C5CCDDCED /* Curio/UI/ComposerView.swift */,
+				31D6A508344FE5AC18B96AE7 /* Curio/UI/SidebarView.swift */,
+				57D119080999EF0F0865A0CD /* Curio/UI/WorkspaceView.swift */,
+			);
+			name = Curio;
+			sourceTree = "<group>";
+		};
+		FBDC4F23F93125BBEEAE800C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6D2AA0FB8F3AD9E96B06C74 /* Curio.app */,
+				50DE8A3CD591FE014AFEC31F /* CurioTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		47A48C7821D33B242F0953A7 /* Curio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B2BE43149ED42D30AACD9723 /* Build configuration list for PBXNativeTarget "Curio" */;
+			buildPhases = (
+				1FD1ED91876115A61CDFC5E4 /* Sources */,
+				2C0923A3FD6D8A3AC0E427E2 /* Frameworks */,
+				1DF94673D1CC090377E3C82B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Curio;
+			productName = Curio;
+			productReference = F6D2AA0FB8F3AD9E96B06C74 /* Curio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EF505CD88BCC03FDAED183CF /* CurioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E9DCA7B56E674B4A4BC5900E /* Build configuration list for PBXNativeTarget "CurioTests" */;
+			buildPhases = (
+				BA0FA61E54132D8D122E42A3 /* Sources */,
+				FE88472D44589DE15F55650B /* Frameworks */,
+				CE28435D5E02B14AFF36A7A4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7E8384B6FAB7DEF7BE932E17 /* PBXTargetDependency */,
+			);
+			name = CurioTests;
+			productName = CurioTests;
+			productReference = 50DE8A3CD591FE014AFEC31F /* CurioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98F54143AB4E86B28C3AFEE0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 2700;
+				LastUpgradeCheck = 2700;
+			};
+			buildConfigurationList = 389E3AB3166B5E85D4DB22E9 /* Build configuration list for PBXProject "Curio" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E50290A24C49A459B43487C5;
+			productRefGroup = FBDC4F23F93125BBEEAE800C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				47A48C7821D33B242F0953A7 /* Curio */,
+				EF505CD88BCC03FDAED183CF /* CurioTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1DF94673D1CC090377E3C82B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8EFD5743999F168D176AB696 /* Curio/Resources/Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CE28435D5E02B14AFF36A7A4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1FD1ED91876115A61CDFC5E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AF9BCD0C9FB3D614BE88DC0A /* Curio/App/CurioApp.swift in Sources */,
+				8BCC1A6C387AD56B5A674C84 /* Curio/DesignSystem/Controls.swift in Sources */,
+				79FBF14ECA6F5B6CD55426B2 /* Curio/DesignSystem/CurioIcon.swift in Sources */,
+				6EC68DAE268CF1AD88AE64EB /* Curio/DesignSystem/CurioraTokens.swift in Sources */,
+				B1CA15BAD8F9AAAE8608122F /* Curio/NativeServices/NativeServiceBoundary.swift in Sources */,
+				8B48D41FAE634A40B703ED0F /* Curio/Networking/CurioraBackend.swift in Sources */,
+				E5F5B6EFE392CFBABE8282DF /* Curio/State/WorkspaceState.swift in Sources */,
+				160CEDA5707D9EDC9DA04283 /* Curio/UI/ComposerView.swift in Sources */,
+				FCC201827855125281E84066 /* Curio/UI/SidebarView.swift in Sources */,
+				90E938027D305B1B51CD93CC /* Curio/UI/WorkspaceView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BA0FA61E54132D8D122E42A3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9D365548021B9A6042754007 /* CurioTests/WorkspaceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7E8384B6FAB7DEF7BE932E17 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 47A48C7821D33B242F0953A7 /* Curio */;
+			targetProxy = 61C316BB80810F9CBB27735D /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		6E2EDAAA370211D9A0CDE329 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.curiora.curiotests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curio.app/Contents/MacOS/Curio";
+			};
+			name = Release;
+		};
+		89E1FD6268CC0F221A2BE178 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_STRICT_CONCURRENCY = complete;
+			};
+			name = Debug;
+		};
+		B0AC3B4D2AECACA1520F6907 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Curio/Curio.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Curio;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = curio.curiora.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Debug;
+		};
+		E6DE6C99132752C914FEF632 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_STRICT_CONCURRENCY = complete;
+			};
+			name = Release;
+		};
+		F69656454BCB14659B9DFAD7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.curiora.curiotests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Curio.app/Contents/MacOS/Curio";
+			};
+			name = Debug;
+		};
+		FE6708A48436D22F23655B7A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Curio/Curio.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				ENABLE_APP_SANDBOX = YES;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_INCOMING_NETWORK_CONNECTIONS = NO;
+				ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO;
+				ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO;
+				ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO;
+				ENABLE_RESOURCE_ACCESS_CALENDARS = NO;
+				ENABLE_RESOURCE_ACCESS_CAMERA = NO;
+				ENABLE_RESOURCE_ACCESS_CONTACTS = NO;
+				ENABLE_RESOURCE_ACCESS_LOCATION = NO;
+				ENABLE_RESOURCE_ACCESS_PRINTING = NO;
+				ENABLE_RESOURCE_ACCESS_USB = NO;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = Curio;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				MACOSX_DEPLOYMENT_TARGET = 14.0;
+				MARKETING_VERSION = 0.1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = curio.curiora.com;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 6.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		389E3AB3166B5E85D4DB22E9 /* Build configuration list for PBXProject "Curio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				89E1FD6268CC0F221A2BE178 /* Debug */,
+				E6DE6C99132752C914FEF632 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B2BE43149ED42D30AACD9723 /* Build configuration list for PBXNativeTarget "Curio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B0AC3B4D2AECACA1520F6907 /* Debug */,
+				FE6708A48436D22F23655B7A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E9DCA7B56E674B4A4BC5900E /* Build configuration list for PBXNativeTarget "CurioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F69656454BCB14659B9DFAD7 /* Debug */,
+				6E2EDAAA370211D9A0CDE329 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98F54143AB4E86B28C3AFEE0 /* Project object */;
+}

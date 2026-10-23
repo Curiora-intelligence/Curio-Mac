@@ -1,0 +1,13 @@
+.DS_Store
+build/
+DerivedData/
+*.xcuserstate
+xcuserdata/
+.env
+.venv/
+__pycache__/
+.pytest_cache/
+*.pyc
+test-results/
+evidence/
+aiml/

@@ -1,0 +1,215 @@
+Command line invocation:
+    /Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild -project Curio.xcodeproj -scheme Curio -configuration Debug -destination platform=macOS -derivedDataPath build test
+
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:macOS, arch:arm64, id:00008132-001C09591A05801C, name:My Mac }
+{ platform:macOS, arch:x86_64, id:00008132-001C09591A05801C, name:My Mac }
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (2 targets)
+    Target 'CurioTests' in project 'Curio'
+        ➜ Explicit dependency on target 'Curio' in project 'Curio'
+    Target 'Curio' in project 'Curio' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+ExecuteExternalTool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+Build description signature: ce949f6826ec9e51234ba04b9e79c543
+Build description path: /Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/XCBuildData/ce949f6826ec9e51234ba04b9e79c543.xcbuilddata
+ClangStatCache /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/Curio.xcodeproj
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang-stat-cache /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -o /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/SDKStatCaches.noindex/macosx27.0-26A425-7231f6df4def33e022ae2eb8f782df1a.sdkstatcache
+
+MkDir /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /bin/mkdir -p /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest
+
+MkDir /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /bin/mkdir -p /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents
+
+MkDir /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/MacOS (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /bin/mkdir -p /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/MacOS
+
+MkDir /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /bin/mkdir -p /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns
+
+ProcessProductPackaging /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/Curio/Curio.entitlements /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/Curio.app.xcent (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    
+    Entitlements:
+    
+    {
+    "com.apple.security.app-sandbox" = 1;
+    "com.apple.security.device.audio-input" = 1;
+    "com.apple.security.files.user-selected.read-only" = 1;
+    "com.apple.security.get-task-allow" = 1;
+    "com.apple.security.personal-information.speech-recognition" = 1;
+}
+    
+    builtin-productPackagingUtility /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/Curio/Curio.entitlements -entitlements -format xml -o /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/Curio.app.xcent
+
+ProcessProductPackagingDER /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/Curio.app.xcent /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/Curio.app.xcent.der (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /usr/bin/derq query -f xml -i /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/Curio.app.xcent -o /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/Curio.app.xcent.der --raw
+
+ProcessInfoPlistFile /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/Info.plist /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/empty-Curio.plist (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    builtin-infoPlistUtility /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/empty-Curio.plist -producttype com.apple.product-type.application -genpkginfo /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PkgInfo -expandbuildsettings -platform macosx -additionalcontentfile /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/assetcatalog_generated_info.plist -o /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/Info.plist
+
+ProcessInfoPlistFile /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/Info.plist /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/empty-CurioTests.plist (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    builtin-infoPlistUtility /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/empty-CurioTests.plist -producttype com.apple.product-type.bundle.unit-test -expandbuildsettings -platform macosx -o /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/Info.plist
+
+Ld /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/Binary/CurioTests normal x86_64 (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target x86_64-apple-macos14.0 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/CurioTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -rpath -Xlinker @executable_path/../Frameworks -bundle_loader /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/Curio -Xlinker -object_path_lto -Xlinker /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/CurioTests_lto.o -rdynamic -Xlinker -dependency_info -Xlinker /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/CurioTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/CurioTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/Curio.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/Binary/CurioTests
+
+Ld /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/Binary/CurioTests normal arm64 (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -Xlinker -reproducible -target arm64-apple-macos14.0 -bundle -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk -Os -Xlinker -no_warn_duplicate_libraries -L/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -L/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug -L/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib -F/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/EagerLinkingTBDs/Debug -F/Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug -iframework /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/Library/Frameworks -filelist /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/CurioTests.LinkFileList -Xlinker -rpath -Xlinker /usr/lib/swift -Xlinker -rpath -Xlinker @loader_path/../Frameworks -Xlinker -rpath -Xlinker @executable_path/../Frameworks -bundle_loader /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/Curio -Xlinker -object_path_lto -Xlinker /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/CurioTests_lto.o -rdynamic -Xlinker -dependency_info -Xlinker /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/CurioTests_dependency_info.dat -fobjc-link-runtime -L/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/macosx -L/usr/lib/swift -Xlinker -add_ast_path -Xlinker /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/CurioTests.swiftmodule -Xlinker -needed_framework -Xlinker XCTest -framework XCTest -Xlinker -needed-lXCTestSwiftSupport -lXCTestSwiftSupport /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/Curio.debug.dylib -Xlinker -no_adhoc_codesign -o /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/Binary/CurioTests
+
+CreateUniversalBinary /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/MacOS/CurioTests normal arm64\ x86_64 (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/lipo -create /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/Binary/CurioTests /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/Binary/CurioTests -output /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/MacOS/CurioTests
+
+CopySwiftLibs /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    builtin-swiftStdLibTool --copy --verbose --sign - --scan-executable /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/MacOS/CurioTests --scan-folder /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/Frameworks --scan-folder /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/PlugIns --scan-folder /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/Library/SystemExtensions --scan-folder /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/Extensions --platform macosx --toolchain /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --destination /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/Frameworks --strip-bitcode --scan-executable /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/usr/lib/libXCTestSwiftSupport.dylib --strip-bitcode-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/bitcode_strip --emit-dependency-info /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/SwiftStdLibToolInputDependencies.dep --filter-for-swift-os --back-deploy-swift-span
+
+ExtractAppIntentsMetadata (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/appintentsmetadataprocessor --toolchain-dir /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain --module-name CurioTests --sdk-root /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX27.0.sdk --xcode-version 27A9275 --platform-family macOS --deployment-target 14.0 --bundle-identifier com.curiora.curiotests --output /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/Resources --target-triple arm64-apple-macos14.0 --target-triple x86_64-apple-macos14.0 --binary-file /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest/Contents/MacOS/CurioTests --dependency-file /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/CurioTests_dependency_info.dat --dependency-file /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/CurioTests_dependency_info.dat --stringsdata-file /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/ExtractedAppShortcutsMetadata.stringsdata --stringsdata-file /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/ExtractedAppShortcutsMetadata.stringsdata --source-file-list /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/CurioTests.SwiftFileList --source-file-list /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/CurioTests.SwiftFileList --metadata-file-list /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/CurioTests.DependencyMetadataFileList --static-metadata-file-list /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/CurioTests.DependencyStaticMetadataFileList --swift-const-vals-list /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/arm64/CurioTests.SwiftConstValuesFileList --swift-const-vals-list /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/CurioTests.build/Objects-normal/x86_64/CurioTests.SwiftConstValuesFileList --compile-time-extraction --deployment-aware-processing --no-app-shortcuts-localization
+2026-10-23 22:21:34.442 appintentsmetadataprocessor[2375:108116] Starting appintentsmetadataprocessor export
+2026-10-23 22:21:34.446 appintentsmetadataprocessor[2375:108116] warning: Metadata extraction skipped, no AppIntents.framework dependency found
+
+CodeSign /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest
+
+RegisterExecutionPolicyException /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    builtin-RegisterExecutionPolicyException /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest
+
+Touch /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest (in target 'CurioTests' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    /usr/bin/touch -c /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/PlugIns/CurioTests.xctest
+
+CodeSign /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/Curio.debug.dylib (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/Curio.debug.dylib
+/Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/Curio.debug.dylib: replacing existing signature
+
+CodeSign /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/__preview.dylib (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --timestamp\=none --generate-entitlement-der /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/__preview.dylib
+/Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app/Contents/MacOS/__preview.dylib: replacing existing signature
+
+CodeSign /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    
+    Signing Identity:     "Sign to Run Locally"
+    
+    /usr/bin/codesign --force --sign - --entitlements /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/Curio.build/Debug/Curio.build/Curio.app.xcent --timestamp\=none --generate-entitlement-der /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app
+/Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app: replacing existing signature
+
+Validate /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    builtin-validationUtility /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app -no-validate-extension -infoplist-subpath Contents/Info.plist
+
+RegisterWithLaunchServices /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app (in target 'Curio' from project 'Curio')
+    cd /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac
+    builtin-lsregisterurl --record-path /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/XCBuildData/registered-launchservices.txt -- /System/Library/Frameworks/CoreServices.framework/Versions/Current/Frameworks/LaunchServices.framework/Versions/Current/Support/lsregister -f -R -trusted /Users/saiganeshsattenapalli/my\ projects/Curiora/Curio-Mac/build/Build/Products/Debug/Curio.app
+
+PruneExplicitPrecompiledModules /Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/SwiftExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/SDKExplicitPrecompiledModules
+
+PruneExplicitPrecompiledModules /Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/Build/Intermediates.noindex/ExplicitPrecompiledModules
+
+note: Disabling hardened runtime with ad-hoc codesigning. (in target 'Curio' from project 'Curio')
+2026-10-23 22:21:35.313201+0530 Curio[2383:108206] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.313658+0530 Curio[2383:108206] [Application] Error registering app with intents framework: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.314253+0530 Curio[2383:108208] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.314299+0530 Curio[2383:108208] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.315472+0530 Curio[2383:108207] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.315516+0530 Curio[2383:108207] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.316280+0530 Curio[2383:108207] [Connection] Will NOT re-try to establish the connection
+2026-10-23 22:21:35.316367+0530 Curio[2383:108206] [Connection] Unable to get synchronousRemoteObjectProxy, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.316764+0530 Curio[2383:108206] [Connection] Unable to re-register with Process Instance Registry, error: Error Domain=NSCocoaErrorDomain Code=4097 "connection to service named com.apple.linkd.autoShortcut" UserInfo={NSDebugDescription=connection to service named com.apple.linkd.autoShortcut}
+2026-10-23 22:21:35.444106+0530 Curio[2383:108180] ApplePersistenceIgnoreState: Existing state will not be touched. New state will be written to /Users/saiganeshsattenapalli/Library/Containers/curio.curiora.com/Data/tmp/curio.curiora.com.savedState
+Test Suite 'All tests' started at 2026-10-23 22:21:36.559.
+Test Suite 'CurioTests.xctest' started at 2026-10-23 22:21:36.560.
+Test Suite 'WorkspaceTests' started at 2026-10-23 22:21:36.560.
+Test Case '-[CurioTests.WorkspaceTests testAttachmentValidationAndRemovalLifecycle]' started.
+Test Case '-[CurioTests.WorkspaceTests testAttachmentValidationAndRemovalLifecycle]' passed (0.004 seconds).
+Test Case '-[CurioTests.WorkspaceTests testBackendFailsClosed]' started.
+Test Case '-[CurioTests.WorkspaceTests testBackendFailsClosed]' passed (0.010 seconds).
+Test Case '-[CurioTests.WorkspaceTests testBrandAssetsRemainOpaqueInBothAppearances]' started.
+Test Case '-[CurioTests.WorkspaceTests testBrandAssetsRemainOpaqueInBothAppearances]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testDictationCancelClearsOnlyTransientTranscript]' started.
+Test Case '-[CurioTests.WorkspaceTests testDictationCancelClearsOnlyTransientTranscript]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testDisconnectedSearchHasNoInventedResults]' started.
+Test Case '-[CurioTests.WorkspaceTests testDisconnectedSearchHasNoInventedResults]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testDraftsSurviveModeSwitchAndNewChat]' started.
+Test Case '-[CurioTests.WorkspaceTests testDraftsSurviveModeSwitchAndNewChat]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testLiquidReversalInheritsEntireContourAndSettlesExactly]' started.
+Test Case '-[CurioTests.WorkspaceTests testLiquidReversalInheritsEntireContourAndSettlesExactly]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testLiquidSelectionRemainsContainedDuringTravel]' started.
+Test Case '-[CurioTests.WorkspaceTests testLiquidSelectionRemainsContainedDuringTravel]' passed (0.002 seconds).
+Test Case '-[CurioTests.WorkspaceTests testNativeExecutionUnavailable]' started.
+Test Case '-[CurioTests.WorkspaceTests testNativeExecutionUnavailable]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testSearchFindsAvailableMessagesAndNavigatesWithoutConsumingDraft]' started.
+Test Case '-[CurioTests.WorkspaceTests testSearchFindsAvailableMessagesAndNavigatesWithoutConsumingDraft]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testSidebarBoundsPersistenceAndViewportRecovery]' started.
+Test Case '-[CurioTests.WorkspaceTests testSidebarBoundsPersistenceAndViewportRecovery]' passed (0.003 seconds).
+Test Case '-[CurioTests.WorkspaceTests testSpeechAuthorizationCallbackMayArriveOffMainActor]' started.
+Test Case '-[CurioTests.WorkspaceTests testSpeechAuthorizationCallbackMayArriveOffMainActor]' passed (0.001 seconds).
+Test Case '-[CurioTests.WorkspaceTests testUnavailableActionDoesNotConsumeDraft]' started.
+Test Case '-[CurioTests.WorkspaceTests testUnavailableActionDoesNotConsumeDraft]' passed (0.003 seconds).
+Test Suite 'WorkspaceTests' passed at 2026-10-23 22:21:36.600.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.030 (0.040) seconds
+Test Suite 'CurioTests.xctest' passed at 2026-10-23 22:21:36.600.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.030 (0.040) seconds
+Test Suite 'All tests' passed at 2026-10-23 22:21:36.600.
+	 Executed 13 tests, with 0 failures (0 unexpected) in 0.030 (0.042) seconds
+2026-10-23 22:21:36.884 xcodebuild[2337:107909] [MT] IDETestOperationsObserverDebug: 2.231 elapsed -- Testing started completed.
+2026-10-23 22:21:36.884 xcodebuild[2337:107909] [MT] IDETestOperationsObserverDebug: 0.000 sec, +0.000 sec -- start
+2026-10-23 22:21:36.884 xcodebuild[2337:107909] [MT] IDETestOperationsObserverDebug: 2.231 sec, +2.231 sec -- end
+
+Test session results, code coverage, and logs:
+	/Users/saiganeshsattenapalli/my projects/Curiora/Curio-Mac/build/Logs/Test/Test-Curio-2026.10.23_22-21-32-+0530.xcresult
+
+** TEST SUCCEEDED **
+
+Testing started

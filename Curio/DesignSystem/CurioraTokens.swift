@@ -20,6 +20,7 @@ enum Curiora {
     static let glass = Color("glass")
     static let segmentShell = Color("segmentShell")
     static let waterTop = Color("waterTop")
+    static let waterMiddle = Color("waterMiddle")
     static let waterBottom = Color("waterBottom")
     static let focusNeutral = Color("focusNeutral")
     static let contentWidth: CGFloat = 770

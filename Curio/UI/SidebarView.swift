@@ -4,7 +4,6 @@ struct SidebarView: View {
     @Bindable var state: WorkspaceState
     var isOverlay = false
     let close: () -> Void
-    @FocusState private var searchFocused: Bool
     var body: some View {
         VStack(spacing:4) {
             HStack(spacing:8) {
@@ -17,7 +16,7 @@ struct SidebarView: View {
                 Spacer(minLength:0)
                 HStack(spacing:0) {
                     IconButton(icon:.search,label:"Search conversations",size:32,iconSize:18) {
-                        state.searchVisible.toggle(); searchFocused = state.searchVisible
+                        state.searchVisible = true; state.narrowSidebarOpen = false
                     }
                     IconButton(icon:.panel,label:"Collapse navigation",size:32,iconSize:18,shortcut:isOverlay ? .cancelAction : nil,action:close)
                 }
@@ -27,15 +26,10 @@ struct SidebarView: View {
                 navigation("Scheduled",icon:.clock) { state.destination = .scheduled }
                 navigation("Library",icon:.library) { state.destination = .library }
             }
-            if state.searchVisible {
-                TextField("Search conversations",text:$state.search)
-                    .textFieldStyle(.roundedBorder).font(.system(size:12)).focused($searchFocused)
-                    .padding(.horizontal,4).padding(.top,12)
-            }
             Text("Recents").font(.system(size:11,weight:.medium)).foregroundStyle(Curiora.secondary)
                 .frame(maxWidth:.infinity,alignment:.leading).padding(.leading,12).padding(.top,27).padding(.bottom,10)
             ScrollView {
-                Text(state.search.isEmpty ? "No conversations yet" : "No matching conversations")
+                Text("No conversations yet")
                     .font(.system(size:12)).foregroundStyle(Curiora.secondary)
                     .frame(maxWidth:.infinity,alignment:.leading).padding(.horizontal,12).padding(.top,8)
             }.accessibilityLabel("Recents")
@@ -58,13 +52,7 @@ struct SidebarView: View {
         .accessibilityElement(children:.contain).accessibilityLabel("Main navigation")
     }
     private func navigation(_ title: String, icon: CurioIcon.Kind, action: @escaping () -> Void) -> some View {
-        Button(action:action) {
-            HStack(spacing:10) {
-                CurioIcon(kind:icon)
-                Text(title).font(.system(size:13,weight:title == "New chat" ? .medium : .regular))
-                Spacer(minLength:0)
-            }.padding(.horizontal,12).frame(height:42)
-        }.buttonStyle(CurioraButtonStyle()).accessibilityIdentifier("nav-\(title)")
+        NavigationRow(title:title,icon:icon,action:action)
     }
 }
 
@@ -77,7 +65,8 @@ struct SidebarResizeHandle: View {
     var body: some View {
         RoundedRectangle(cornerRadius:4).fill(hovering || focused || dragOrigin != nil ? Curiora.secondary.opacity(0.3) : .clear)
             .padding(.horizontal,3).padding(.vertical,8).frame(width:10)
-            .contentShape(Rectangle()).focusable().focused($focused)
+            .contentShape(Rectangle()).focusable().focusEffectDisabled().focused($focused)
+            .overlay { if focused && dragOrigin == nil { RoundedRectangle(cornerRadius:3).stroke(Curiora.focusNeutral,lineWidth:2).frame(width:6,height:40) } }
             .accessibilityLabel("Resize navigation")
             .accessibilityValue("\(Int(state.sidebarWidth(for:windowWidth))) points")
             .accessibilityHint("Left and Right arrows resize. Return resets to 270 points.")

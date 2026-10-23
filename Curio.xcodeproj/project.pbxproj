@@ -19,6 +19,12 @@
 		B1CA15BAD8F9AAAE8608122F /* Curio/NativeServices/NativeServiceBoundary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5143DB73227F1416A44C3B /* Curio/NativeServices/NativeServiceBoundary.swift */; };
 		E5F5B6EFE392CFBABE8282DF /* Curio/State/WorkspaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 535DE8B92CC198940A284B48 /* Curio/State/WorkspaceState.swift */; };
 		FCC201827855125281E84066 /* Curio/UI/SidebarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D6A508344FE5AC18B96AE7 /* Curio/UI/SidebarView.swift */; };
+		02B9CAD91205A8E1EC9BD917 = {isa = PBXBuildFile; fileRef = F88BE536DB7C4A587A5BEE2E; };
+		F2B48FAE126F9CE14BF451E0 = {isa = PBXBuildFile; fileRef = 494787B55A3E93D7B31E8336; };
+		9CDAD5ABA58F024090F8CFD8 = {isa = PBXBuildFile; fileRef = 41404F9A1B44E0B87177C3B9; };
+		145DF9D636037EF04493DB22 = {isa = PBXBuildFile; fileRef = 5DD8B238ACCFD478F3C243C9; };
+		415BDD8384AC80531F883B9E = {isa = PBXBuildFile; fileRef = 86685FF00FEA4C6303E0FB1B; };
+		E0E90A93A4BE47FD01D5DCA3 = {isa = PBXBuildFile; fileRef = 29340E8E767B896D59F423BF; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +52,12 @@
 		BAC0907567DE1B63437FE3ED /* Curio/DesignSystem/CurioIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/DesignSystem/CurioIcon.swift; sourceTree = SOURCE_ROOT; };
 		F107EADD6A01E29718515FB3 /* Curio/DesignSystem/CurioraTokens.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/DesignSystem/CurioraTokens.swift; sourceTree = SOURCE_ROOT; };
 		F6D2AA0FB8F3AD9E96B06C74 /* Curio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Curio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F88BE536DB7C4A587A5BEE2E = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/DesignSystem/LiquidMotion.swift; sourceTree = SOURCE_ROOT; };
+		494787B55A3E93D7B31E8336 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/DesignSystem/InteractionIcon.swift; sourceTree = SOURCE_ROOT; };
+		41404F9A1B44E0B87177C3B9 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/NativeServices/Attachments.swift; sourceTree = SOURCE_ROOT; };
+		5DD8B238ACCFD478F3C243C9 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/NativeServices/DictationService.swift; sourceTree = SOURCE_ROOT; };
+		86685FF00FEA4C6303E0FB1B = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/Networking/ConversationSearch.swift; sourceTree = SOURCE_ROOT; };
+		29340E8E767B896D59F423BF = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Curio/UI/ConversationSearchView.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +99,12 @@
 		EF69FDC9BA97107E931FF888 /* Curio */ = {
 			isa = PBXGroup;
 			children = (
+				F88BE536DB7C4A587A5BEE2E,
+				494787B55A3E93D7B31E8336,
+				41404F9A1B44E0B87177C3B9,
+				5DD8B238ACCFD478F3C243C9,
+				86685FF00FEA4C6303E0FB1B,
+				29340E8E767B896D59F423BF,
 				7EECC7F011D8D505BADDC0B9 /* Curio/App/CurioApp.swift */,
 				79211F3749E5D74BE517BD6A /* Curio/DesignSystem/Controls.swift */,
 				BAC0907567DE1B63437FE3ED /* Curio/DesignSystem/CurioIcon.swift */,
@@ -199,6 +217,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B9CAD91205A8E1EC9BD917,
+				F2B48FAE126F9CE14BF451E0,
+				9CDAD5ABA58F024090F8CFD8,
+				145DF9D636037EF04493DB22,
+				415BDD8384AC80531F883B9E,
+				E0E90A93A4BE47FD01D5DCA3,
 				AF9BCD0C9FB3D614BE88DC0A /* Curio/App/CurioApp.swift in Sources */,
 				8BCC1A6C387AD56B5A674C84 /* Curio/DesignSystem/Controls.swift in Sources */,
 				79FBF14ECA6F5B6CD55426B2 /* Curio/DesignSystem/CurioIcon.swift in Sources */,
@@ -284,7 +308,9 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Curio;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Curio uses your microphone only when you start dictation, to prepare editable text without sending it.";
+                INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Curio transcribes speech on this Mac into text you can review and insert. No automatic submission.";
+                INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = curio.curiora.com;
@@ -344,7 +370,9 @@
 				ENABLE_RESOURCE_ACCESS_USB = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = Curio;
-				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Curio uses your microphone only when you start dictation, to prepare editable text without sending it.";
+                INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Curio transcribes speech on this Mac into text you can review and insert. No automatic submission.";
+                INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
 				MARKETING_VERSION = 0.1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = curio.curiora.com;

@@ -9,6 +9,13 @@ struct WorkspaceView: View {
                 VStack(spacing:0) {
                     Spacer(minLength:24)
                     VStack(spacing:0) {
+                        if state.mode == .chat, let conversation = state.selectedConversation {
+                            VStack(alignment:.leading,spacing:12) {
+                                Text(conversation.title).font(.headline)
+                                ForEach(Array(conversation.messages.enumerated()),id:\.offset) { _,text in Text(text).textSelection(.enabled) }
+                                if !conversation.contentAvailable { Text("Message content is not available on this Mac.").foregroundStyle(Curiora.secondary) }
+                            }.frame(maxWidth:.infinity,alignment:.leading).padding(.bottom,24)
+                        }
                         Text(state.mode == .chat ? "Where should we begin?" : "What should we work on?")
                             .font(.system(size:Curiora.headingSize(windowWidth:windowWidth),weight:.medium))
                             .tracking(-0.035 * Curiora.headingSize(windowWidth:windowWidth))
@@ -70,8 +77,18 @@ struct RootView: View {
                         .shadow(color:.black.opacity(0.12),radius:18,x:8)
                 }
             }
+            .disabled(state.searchVisible)
+            .accessibilityHidden(state.searchVisible)
+            .overlay {
+                if state.searchVisible {
+                    ZStack {
+                        Color.black.opacity(0.32).ignoresSafeArea().onTapGesture { state.searchVisible = false }.accessibilityHidden(true)
+                        ConversationSearchView(state:state).padding(24)
+                    }.disabled(false).accessibilityHidden(false)
+                }
+            }
             .onChange(of:narrow) { _,_ in state.narrowSidebarOpen = false }
-            .onExitCommand { state.narrowSidebarOpen = false; state.notice = nil }
+            .onExitCommand { state.searchVisible = false; state.narrowSidebarOpen = false; state.notice = nil }
             .animation(reducedMotion ? nil : Curiora.layoutMotion,value:state.sidebarVisible)
             .animation(reducedMotion ? nil : Curiora.layoutMotion,value:state.narrowSidebarOpen)
             .onChange(of:state.toggleSidebarRequest) { _,_ in
@@ -101,9 +118,9 @@ struct RootView: View {
                 }
                 if !narrow { Text("Curio").font(.system(size:13,weight:.medium)).foregroundStyle(Curiora.secondary) }
                 Spacer()
-                IconButton(icon:.temporary,label:"Temporary chat — unavailable") {
+                if state.mode == .chat { IconButton(icon:.temporary,label:"Temporary chat — unavailable") {
                     state.notice = "Temporary chat isn't available. No messages are sent or stored by this shell."
-                }
+                } }
             }
             WorkspaceSwitch(state:state)
         }.frame(height:72).padding(.horizontal, narrow ? 12 : 24)
@@ -127,7 +144,7 @@ struct AvailabilitySheet: View {
                 }
                 Text("No account is connected. Authentication and chat inference are not implemented yet.")
                 Text("Appearance follows macOS. Reduce Motion and Increase Contrast follow Accessibility settings.")
-                Text("Drafts stay in this window until you quit. Only sidebar width and thinking effort are saved on this Mac.")
+                Text("Drafts and file selections stay in this window until you close it. Files are not uploaded. Dictation runs on this Mac when supported. Only sidebar width and thinking effort are saved.")
             } else {
                 Text(destination == .scheduled ? "Scheduled tasks aren't connected yet." : "Your library isn't connected yet.").font(.headline)
                 Text(destination == .scheduled ? "Scheduling will require the shared Curiora backend. No tasks are running." : "Saved files and memory will appear here when the shared Curiora backend is connected.")

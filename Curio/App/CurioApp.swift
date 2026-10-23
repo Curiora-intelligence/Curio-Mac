@@ -31,6 +31,7 @@ struct CurioCommands: Commands {
     var body: some Commands {
         CommandGroup(after:.newItem) {
             Button("New Chat") { state?.newChat() }.keyboardShortcut("n",modifiers:[.command,.shift])
+            Button("Search Conversations") { state?.searchVisible = true }.keyboardShortcut("k",modifiers:.command)
             Button("Focus Composer") { state?.focusComposer += 1 }.keyboardShortcut("l",modifiers:.command)
         }
         CommandGroup(before:.sidebar) {

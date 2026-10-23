@@ -1,0 +1,45 @@
+JavaScript suites
+✔ edge trajectories stay bounded, settle exactly and do not reverse during travel (29.841583ms)
+✔ nonlinear shoulder and tail separate; final curvature normalizes (0.222ms)
+✔ all contours retain topology and finite bounded coordinates (5.337125ms)
+✔ the resting outline is direction independent and voice geometry stays original and balanced (0.741875ms)
+✔ every reversal starts at the last painted contour and remains finite and contained (72.225417ms)
+✔ searches titles and available message content without mutating catalog (1.508292ms)
+✔ tolerates missing titles/content without inventing matches (0.115416ms)
+✔ idle placeholder types/deletes without changing the input value (4.133083ms)
+✔ focus and typed drafts stop all animation timers (0.977458ms)
+✔ IME and active dictation pause until their completion (0.629041ms)
+✔ hidden document and hidden workspace suspend animation (0.552667ms)
+✔ reduced motion starts static and responds to preference changes (0.732292ms)
+✔ page lifecycle resumes once; disposal removes listeners and timers (0.521541ms)
+✔ prepaint restoration tolerates corrupt/unavailable storage and bounds numeric values (6.622542ms)
+✔ pointer tracks without persistence until release, then reload restores (2.332292ms)
+✔ cancel, capture loss, Escape and blur restore preference and release drag state (2.719958ms)
+✔ keyboard bounds, steps, reset and storage failure stay usable (0.655584ms)
+✔ viewport clamp retains the larger preference for a later wider viewport (0.630958ms)
+✔ mobile, inert and secondary pointers cannot start resizing (0.521584ms)
+✔ drag clamps to 252px and preserves workspace at the narrowest desktop width (0.51225ms)
+ℹ tests 20
+ℹ suites 0
+ℹ pass 20
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 189.92725
+
+Python suite
+.....F.......                                                            [100%]
+=================================== FAILURES ===================================
+________ test_history_navigation_label_matches_its_existing_destination ________
+
+    def test_history_navigation_label_matches_its_existing_destination():
+        with TestClient(app) as client:
+            page = client.get('/').text
+>           assert '<span>History</span>' in page and '<span>Scheduled</span>' not in page
+E           assert ('<span>History</span>' in '<!doctype html>\n<html lang="en">\n\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport"\n    content="width=de...pt>\n  <script type="module" src="http://testserver/static/v-90bbbfbf039dc622/js/app.js"></script>\n</body>\n\n</html>')
+
+tests/test_curiora.py:69: AssertionError
+=========================== short test summary info ============================
+FAILED tests/test_curiora.py::test_history_navigation_label_matches_its_existing_destination
+1 failed, 12 passed in 0.63s

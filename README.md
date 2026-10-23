@@ -20,7 +20,7 @@ The independently launchable Release application is `build/Build/Products/Releas
 
 - Curio branding, semantic light/dark asset colors, product spacing, custom SwiftUI icons, and a native liquid selection animation.
 - Native windows and menus; Chat and Work empty states with separate composers and in-memory drafts.
-- New chat, Scheduled, Library, Recents, search empty state, and profile/settings entry points.
+- New chat, Scheduled, Library, Recents, centered conversation search, and profile/settings entry points.
 - Collapsible sidebar, bounded resizing, and an overlay sidebar below 760 points.
 - System appearance, reduced motion, selected-state accessibility, focus rings, native menus, and keyboard commands.
 
@@ -28,6 +28,7 @@ The independently launchable Release application is `build/Build/Products/Releas
 | --- | --- |
 | ⌘1 / ⌘2 | Chat / Work |
 | ⌘L | Focus composer |
+| ⌘K | Search conversations |
 | ⇧⌘N | Return to Chat and focus its existing draft |
 | ⌃⌘S | Toggle navigation |
 | Escape | Close narrow navigation overlay |
@@ -40,9 +41,9 @@ Tab access to all controls follows macOS **Keyboard → Keyboard navigation**. D
 
 ## Boundaries
 
-This is an application shell. Chat inference, authentication, history, scheduling, library data, attachments, dictation, Speak, temporary conversations, and Work execution are explicitly unavailable. Sending a draft explains the missing connection without consuming it or generating a response. Thinking effort is a local preference only.
+This is an application shell. Chat inference, authentication, authenticated history, scheduling, library data, Speak, temporary conversations, and Work execution are explicitly unavailable. Sending a draft explains the missing connection without consuming it or generating a response. Thinking effort is a local preference only.
 
-`Networking/CurioraBackend.swift` defines an asynchronous interface and a disconnected adapter. It documents existing web routes without inventing an authentication or Work wire contract. `NativeServices/NativeServiceBoundary.swift` is separate, unavailable, and has no execution entry point. Model event data cannot trigger native permissions or execution.
+`Networking/CurioraBackend.swift` defines an asynchronous interface and a disconnected adapter. It documents existing web routes without inventing an authentication or Work wire contract. Native services provide local file selection and on-device dictation, with explicit user initiation and no execution entry point. Model event data cannot trigger native permissions or execution.
 
 ## Structure
 
@@ -53,8 +54,16 @@ This is an application shell. Chat inference, authentication, history, schedulin
 | `Curio/UI` | Sidebar, composer, workspace, availability sheets |
 | `Curio/State` | Per-window drafts and navigation; local preferences |
 | `Curio/Networking` | Future backend boundary; disconnected adapter |
-| `Curio/NativeServices` | Future native capability boundary |
+| `Curio/NativeServices` | Local file selection, on-device dictation, capability boundary |
 | `Curio/Resources` | Adaptive colors and application icon |
 | `CurioTests` | State, boundary, color and geometry checks |
 
 See [verification](docs/verification.md) for build results, checks, limitations and changed files, and [visual comparison](docs/parity.html) for actual Web/native screenshots.
+
+## Interaction pass
+
+Local attachments support images, PDF, text, Markdown, CSV and JSON (five files, 15 MB each). Previews are removable; no file is uploaded or processed. Dictation requires microphone and Speech permissions and on-device recognition support for the current language. Stop makes the transcript editable; Insert text adds it to the draft without sending. Cancel discards the transcript.
+
+Search matches titles and available message content through an injectable catalog interface. The default Mac catalog is honestly empty until an authenticated backend adapter is supplied. Temporary Chat appears only in Chat and remains unavailable.
+
+See [interaction verification](docs/interaction-pass.md) for the current changes, crash diagnosis and verification results. Earlier foundation reports describe the original milestone.

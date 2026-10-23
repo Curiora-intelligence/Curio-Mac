@@ -1,6 +1,6 @@
 import Foundation
 
-/// Reserved for future, explicit user-initiated native integrations.
+/// Capability implementation flags; permission/device availability is checked at use.
 /// No model response, backend event, or arbitrary command can be passed here.
 /// Permission prompts and approved operations must live in a separate adapter.
 protocol NativeServiceAvailability: Sendable {
@@ -8,8 +8,8 @@ protocol NativeServiceAvailability: Sendable {
     var dictationAvailable: Bool { get }
     var executionAvailable: Bool { get }
 }
-struct UnconnectedNativeServices: NativeServiceAvailability {
-    let attachmentsAvailable = false
-    let dictationAvailable = false
+struct LocalNativeServices: NativeServiceAvailability {
+    let attachmentsAvailable = true
+    let dictationAvailable = true
     let executionAvailable = false
 }
